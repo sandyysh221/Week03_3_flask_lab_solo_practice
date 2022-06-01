@@ -7,3 +7,9 @@ from models.order_list import *
 @app.route("/")
 def index():
     return render_template("index.html", title="Home", orders=orders)
+
+
+@app.route("/orders/<index>")
+def order_index(index):
+    order = orders[int(index)]
+    return render_template("order.html", title="Order Details", order=order)
