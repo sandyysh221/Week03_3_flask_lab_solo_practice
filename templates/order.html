@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
       rel="stylesheet"
       href="{{ url_for('static', filename='styles.css') }}"
     />
     <title>{{title}}</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="order-container">
-        <h2>{{order.name}}'s Order:</h2>
-        <p>
-            <ul>
-                <li>Date Ordered: <b>{{order.date.strftime("%b %d %Y")}}</b></li>
-                <li>Kimbap filling: <b>{{order.filling}}</b></li>
-                <li>Quantity: <b>{{order.quantity}}</b></li>
-            </ul>
-        </p>
+      <h2>{{order.name}}'s Order:</h2>
+      <ul>
+        <li>Date Ordered: <b>{{order.date.strftime("%b %d %Y")}}</b></li>
+        <li>Kimbap filling: <b>{{order.filling}}</b></li>
+        <li>Quantity: <b>{{order.quantity}}</b></li>
+      </ul>
+      <a href="/" id="home-link">🔙</a>
     </div>
-</body>
+  </body>
 </html>
