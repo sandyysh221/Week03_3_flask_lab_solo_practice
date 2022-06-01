@@ -6,4 +6,4 @@ from models.order_list import *
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title="Home", orders=orders)
